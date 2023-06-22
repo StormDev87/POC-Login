@@ -29,7 +29,7 @@ const LoginPage : React.FC<ILoginPage>  = (props) => {
 
   const handleSubmit = () =>{
     setCountSubmit(prevState => prevState + 1);
-    axios.post("https://localhost:5000/api/v1/Auth/login",
+    axios.post("https://app.vbup.it/api/v1/Auth/login",
       loginData, { withCredentials: true })
       .then((response :AxiosResponse)=>{
         if(response.status === 202 || response.status === 200) {
